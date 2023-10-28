@@ -2,48 +2,25 @@
 from Usuario import *
 from basededatos import *
 import psycopg2
-conexion = Basedatos("localhost",5432,"postgres","kevomm636","ServidorPOO")
-c = conexion.conectar()
+conexion = Basedatos("localhost",5432,"postgres","root","ServidorPOO")
+conexion.conectar()
 
 class AdministradorGeneral(Usuario):
     def __init__(self, conexion):
         super().__init__(conexion)
     
-    def ejecutar(self):
-        opcion = 0
-        while opcion != 7:
-            print("+----------------------------------+")
-            print("|                                  |")
-            print("|        ADMINISTRADOR GENERAL     |")
-            print("|                                  |")
-            print("+----------------------------------+")
-            print("|                                  |")
-            print("| 1. Crear Usuario                 |")
-            print("| 2. Desactivar Usuario            |")
-            print("| 3. Mostrar Usuarios              |")
-            print("| 4. Crear Local                   |")
-            print("| 5. Desactivar Local              |")
-            print("| 6. Mostrar Locales               |")
-            print("| 7. Salir                         |")
-            print("|                                  |")
-            print("+----------------------------------+")
-            opcion = int(input("Ingrese la operación que desea realizar: "))
-            if opcion == 1:
-                self.crearUsuarioAdministradorGeneral(conexion.conectar())
+    def obtenerUsuarioAdministrador(self):
+        try:
+            cursor = self.conexion.cursor()
+            sql = "SELECT id_administrador, user_name, password, isActive FROM administrador_general;"
+            cursor.execute(sql)
+            administrador = cursor.fetchall()
+            print(administrador)
+            return administrador
 
-            elif opcion == 2:
-                self.desactivarUsuario(conexion.conectar())
-            elif opcion ==3:
-                self.leerUsuarios(conexion.conectar())
-            elif opcion ==4:
-                self.crearLocal()
-            elif opcion ==5:
-                self.desactivarLocal()
-            elif opcion ==6:
-                self.leerLocales()
-            elif opcion ==7:
-                print("Hasta luego")
-                break
+        except psycopg2.Error as e:
+            print("Error al leer usuarios", e)
+            return []
 
     def crearUsuarioAdministradorGeneral(self, conexion):
         nombre = input("Nombre del usuario: ")
