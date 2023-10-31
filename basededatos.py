@@ -1,4 +1,5 @@
 import psycopg2
+import json
 
 class Basedatos():
     url = ""
@@ -6,6 +7,7 @@ class Basedatos():
     user = ""
     password = ""
     database = ""
+
 
     def __init__(self, url, port, user, password, database):
         self.url = url
@@ -27,7 +29,5 @@ class Basedatos():
             self.conexion = psycopg2.connect(**credenciales)
             if self.conexion:
                 print("Conexion exitosa a PostgreSQL")
-                return self.conexion
         except psycopg2.Error as e:
             print("Ocurrió un error al conectar a PostgreSQL", e)
-            return None

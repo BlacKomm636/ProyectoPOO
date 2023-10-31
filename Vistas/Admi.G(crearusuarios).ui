@@ -246,6 +246,17 @@ background-color: rgb(109, 107, 56);
         <normaloff>../Imagenes proyecto/regresar.svg</normaloff>../Imagenes proyecto/regresar.svg</iconset>
       </property>
      </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>160</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
     </widget>
     <widget class="QWidget" name="widget_10" native="true">
      <property name="geometry">
@@ -657,7 +668,7 @@ border-radius: 10px;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

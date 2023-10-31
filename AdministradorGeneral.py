@@ -2,21 +2,44 @@
 from Usuario import *
 from basededatos import *
 import psycopg2
-conexion = Basedatos("localhost",5432,"postgres","root","ServidorPOO")
-conexion.conectar()
+
+with open('db_connection.json', 'r') as file:
+    config = json.load(file)
+
+bd = Basedatos(
+    config['DEFAULT']['DB_HOST'],
+    config['DEFAULT']['DB_PORT'],
+    config['DEFAULT']['DB_USER'],
+    config['DEFAULT']['DB_PASSWORD'],
+    config['DEFAULT']['DB_NAME'])
+
+bd.conectar()
 
 class AdministradorGeneral(Usuario):
     def __init__(self, conexion):
         super().__init__(conexion)
     
-    def obtenerUsuarioAdministrador(self):
+    def obtenerUsuarioAdministrador(self, usuario, contrasena):
         try:
-            cursor = self.conexion.cursor()
-            sql = "SELECT id_administrador, user_name, password, isActive FROM administrador_general;"
+            valido = False
+            cursor = bd.conexion.cursor()
+            sql = "SELECT id, user_name, password, is_active FROM administrador_general;"
             cursor.execute(sql)
             administrador = cursor.fetchall()
             print(administrador)
-            return administrador
+            if administrador:
+                for tupla in enumerate(administrador):
+                    if not usuario in tupla[1]:
+                        valido = False
+                        print("usuario incorrecto")
+                    elif not contrasena in tupla[1]:
+                        valido = False
+                        print("contraseña incorrecta")
+                    else:
+                        valido = True
+                        print("correcto!")
+
+            return valido
 
         except psycopg2.Error as e:
             print("Error al leer usuarios", e)

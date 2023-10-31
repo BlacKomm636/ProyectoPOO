@@ -33,7 +33,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="autoFillBackground">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(43, 63, 65);</string>
@@ -79,6 +79,9 @@ border-radius: 55px;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
       <property name="placeholderText">
        <string>Ingresa Tu Contraseña</string>
