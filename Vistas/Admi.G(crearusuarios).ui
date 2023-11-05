@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>601</width>
-      <height>431</height>
+      <width>791</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -33,7 +33,7 @@
        <x>0</x>
        <y>0</y>
        <width>171</width>
-       <height>431</height>
+       <height>451</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -246,24 +246,13 @@ background-color: rgb(109, 107, 56);
         <normaloff>../Imagenes proyecto/regresar.svg</normaloff>../Imagenes proyecto/regresar.svg</iconset>
       </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>30</y>
-        <width>160</width>
-        <height>80</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout"/>
-     </widget>
     </widget>
     <widget class="QWidget" name="widget_10" native="true">
      <property name="geometry">
       <rect>
        <x>210</x>
        <y>60</y>
-       <width>361</width>
+       <width>391</width>
        <height>101</height>
       </rect>
      </property>
@@ -341,7 +330,7 @@ border:2px soild #6B675A;</string>
        <rect>
         <x>60</x>
         <y>10</y>
-        <width>221</width>
+        <width>281</width>
         <height>16</height>
        </rect>
       </property>
@@ -358,7 +347,7 @@ background-color: rgb(186, 186, 186);</string>
        <rect>
         <x>60</x>
         <y>30</y>
-        <width>221</width>
+        <width>281</width>
         <height>16</height>
        </rect>
       </property>
@@ -375,7 +364,7 @@ background-color: rgb(186, 186, 186);</string>
        <rect>
         <x>80</x>
         <y>50</y>
-        <width>221</width>
+        <width>191</width>
         <height>16</height>
        </rect>
       </property>
@@ -392,7 +381,7 @@ background-color: rgb(186, 186, 186);</string>
        <rect>
         <x>50</x>
         <y>70</y>
-        <width>201</width>
+        <width>141</width>
         <height>16</height>
        </rect>
       </property>
@@ -408,7 +397,7 @@ background-color: rgb(186, 186, 186);</string>
     <widget class="QPushButton" name="pushButton_32">
      <property name="geometry">
       <rect>
-       <x>580</x>
+       <x>660</x>
        <y>0</y>
        <width>21</width>
        <height>23</height>
@@ -428,7 +417,7 @@ background-color: rgb(186, 186, 186);</string>
     <widget class="QPushButton" name="pushButton_33">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>640</x>
        <y>0</y>
        <width>21</width>
        <height>23</height>
@@ -448,7 +437,7 @@ background-color: rgb(186, 186, 186);</string>
     <widget class="QPushButton" name="pushButton_34">
      <property name="geometry">
       <rect>
-       <x>540</x>
+       <x>620</x>
        <y>0</y>
        <width>21</width>
        <height>23</height>
@@ -515,7 +504,7 @@ background-color: rgb(186, 186, 186);</string>
       <rect>
        <x>210</x>
        <y>240</y>
-       <width>361</width>
+       <width>411</width>
        <height>101</height>
       </rect>
      </property>
@@ -577,7 +566,7 @@ border:2px soild #6B675A;</string>
        <rect>
         <x>60</x>
         <y>10</y>
-        <width>221</width>
+        <width>301</width>
         <height>16</height>
        </rect>
       </property>
@@ -611,8 +600,8 @@ background-color: rgb(186, 186, 186);</string>
        <rect>
         <x>70</x>
         <y>50</y>
-        <width>251</width>
-        <height>31</height>
+        <width>301</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
