@@ -26,7 +26,6 @@ class AdministradorGeneral(Usuario):
             sql = "SELECT id, user_name, password, is_active FROM administrador_general;"
             cursor.execute(sql)
             administrador = cursor.fetchall()
-            print(administrador)
             if administrador:
                 for tupla in enumerate(administrador):
                     if not usuario in tupla[1]:

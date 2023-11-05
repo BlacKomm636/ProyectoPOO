@@ -1,3 +1,4 @@
+from Mensaje import Ui_Dialog
 from basededatos import *
 from Usuario import *
 import sys
@@ -6,16 +7,18 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QLineEdit
 from AdministradorGeneral import *
-
+from models.Respuestas import Respuestas
 
 
 class Home(QDialog):
 
-    def __init__(self):
-        super(Home, self).__init__()
+    def __init__(self, parent=None):
+        super(Home, self).__init__(parent)
         uic.loadUi("Vistas/Bienvenido.ui", self)
         self.setWindowTitle("Home")
         self.findChild(QPushButton, 'BotonAdminGeneral').clicked.connect(self.abrir_administradorGeneral)
+
+
 
     def abrir_administradorGeneral(self):
         self.loginAdministradorGeneral = LoginAdministradorGeneral()
@@ -39,7 +42,10 @@ class LoginAdministradorGeneral(QMainWindow):
         usuarioAdmin = AdministradorGeneral.obtenerUsuarioAdministrador(self, self.user_name, self.password)
         if usuarioAdmin:
             uic.loadUi("Vistas/Admi.G(mostrarusuarios).ui", self)
+            self.showMaximized()
         else:
+            respuesta = Respuestas("error", "Error!", "Usuario y/o contraseña incorrectos!")
+            Ui_Dialog(respuesta)
             self.findChild(QLineEdit, 'lineEdit').setText("")
             self.findChild(QLineEdit, 'lineEdit_2').setText("")
 
