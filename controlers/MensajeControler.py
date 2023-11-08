@@ -3,7 +3,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QDialog, QPushButton, QLabel
 from PyQt5 import uic
 from PyQt5.QtCore import *
-from models.Respuestas import Respuestas
+from models.Respuesta import Respuesta
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -24,7 +24,7 @@ class Ui_Dialog(QDialog):
         super(Ui_Dialog, self).__init__(parent)
         self.setupUi(Mensaje)
 
-    def setupUi(self, r:Respuestas):
+    def setupUi(self, r:Respuesta):
         uic.loadUi("Vistas/mensajes.ui", self)
         self.setWindowTitle(r.titulo)
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)

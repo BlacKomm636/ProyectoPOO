@@ -1,4 +1,4 @@
-class Respuestas():
+class Respuesta():
     tipo = ""
     titulo = ""
     mensaje = ""
