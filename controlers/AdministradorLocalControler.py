@@ -1,10 +1,37 @@
-from UsuarioControler import Usuario  # Importa la clase base Usuario
+  # Importa la clase base Usuario
+from controlers.AdministradorGeneralControler import bd
+from controlers.UsuarioControler import UsuarioControler
 from db.db_connection import Basedatos
 import psycopg2
 
-class AdministradorLocal(Usuario):
+class AdministradorLocal(UsuarioControler):
     def __init__(self, conexion):
         super()._init_(conexion)
+
+    def obtenerUsuarioAdministrador(self, usuario, contrasena):
+        try:
+            valido = False
+            cursor = bd.conexion.cursor()
+            sql = "SELECT id, user_name, password, is_active FROM administrador_local;"
+            cursor.execute(sql)
+            administrador = cursor.fetchall()
+            if administrador:
+                for tupla in enumerate(administrador):
+                    if not usuario in tupla[1]:
+                        valido = False
+                        print("usuario incorrecto")
+                    elif not contrasena in tupla[1]:
+                        valido = False
+                        print("contraseña incorrecta")
+                    else:
+                        valido = True
+                        print("correcto!")
+
+            return valido
+
+        except psycopg2.Error as e:
+            print("Error al leer usuarios", e)
+            return []
 
     def crearChef(self):
         nombre = input("Nombre del chef: ")
@@ -53,12 +80,3 @@ class AdministradorLocal(Usuario):
         # Implementa aquí la lógica para ver el registro de ventas del día
         pass
 
-if _name_ == "_main_":
-    conexion = Basedatos("localhost", 5432, "postgres", "kevomm636", "ServidorPOO")
-    c = conexion.conectar()
-    
-    # Crear una instancia de AdministradorLocal en lugar de Usuario
-    admin_local = AdministradorLocal(c)
-    
-    # Llamar al método ejecutar
-    admin_local.ejecutar()

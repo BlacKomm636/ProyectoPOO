@@ -9,45 +9,20 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QPushButton
 
 from Vistas.CocineroView import LoginCocinero
+from Vistas.HomeView import Home
 from Vistas.MeseroView import LoginMesero
-from models.Respuesta import Respuesta
+from controlers.QuestionControler import Ui_DialogQuestion
+from models.Pregunta import Pregunta
 
 
-class Home(QDialog):
+class Main(QDialog):
 
     def __init__(self, parent=None):
-        super(Home, self).__init__(parent)
+        super(Main, self).__init__(parent)
         self.setupUI()
 
     def setupUI(self):
-        uic.loadUi("Vistas/Bienvenido.ui", self)
-        # Configura las flags para eliminar el encabezado y los botones de cierre
-        self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
-        # Definición de componentes
-        self.administradorGeneral = self.findChild(QPushButton, 'btn_adminGeneral')
-        self.logo = self.findChild(QPushButton, "btn_logo")
-        self.cocinero = self.findChild(QPushButton, "btn_cocinero")
-        self.administradorLocal = self.findChild(QPushButton, 'btn_adminLocal')
-        self.mesero = self.findChild(QPushButton, 'btn_mesero')
-        self.cerrar = self.findChild(QPushButton, 'btn_cerrar')
-
-        # Carga de imágenes y métodos
-        self.administradorGeneral.setIcon(QIcon("assets/imagenAdministradorGeneral.png"))
-        self.administradorGeneral.clicked.connect(self.abrir_administradorGeneral)
-
-        self.logo.setIcon(QIcon("assets/logo.png"))
-
-        self.mesero.setIcon(QIcon("assets/mesero.png"))
-        self.mesero.clicked.connect(self.abrir_mesero)
-
-        self.administradorLocal.setIcon(QIcon("assets/administradorlocal.png"))
-        self.administradorLocal.clicked.connect(self.abrir_administradorLocal)
-
-        self.cocinero.setIcon(QIcon("assets/cocinero.png"))
-        self.cocinero.clicked.connect(self.abrir_cocinero)
-
-        self.cerrar.setIcon(QIcon("assets/x-solid.svg"))
-        self.cerrar.clicked.connect(self.cerrarAplicacion)
+        Home.setupUI(self)
     def abrir_administradorGeneral(self):
         try:
             self.loginAdministradorGeneral = LoginAdminGeneral()
@@ -59,7 +34,6 @@ class Home(QDialog):
         try:
             self.loginCocinero = LoginCocinero()
             self.loginCocinero.show()
-            self.hide()
         except Exception as ex:
             print(ex)
 
@@ -67,7 +41,6 @@ class Home(QDialog):
         try:
             self.loginAdministradorLocal = LoginAdminLocal()
             self.loginAdministradorLocal.show()
-            self.hide()
         except Exception as ex:
             print(ex)
 
@@ -75,14 +48,12 @@ class Home(QDialog):
         try:
             self.loginMesero = LoginMesero()
             self.loginMesero.show()
-            self.hide()
         except Exception as ex:
             print(ex)
 
     def cerrarAplicacion(self):
-        mensaje = Respuesta("question", "Seguro?", "está seguro que desea cerrar la aplicación?")
-        self.close()
-
+        mensaje = Pregunta("question", "Seguro?", "está seguro que desea cerrar la aplicación?", "cerrarAplicacion")
+        Ui_DialogQuestion(mensaje)
     # Mover ventana
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
@@ -101,7 +72,7 @@ class Home(QDialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ventana = Home()
+    ventana = Main()
     ventana.show()
     sys.exit(app.exec_())
 

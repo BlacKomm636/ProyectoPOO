@@ -1,11 +1,10 @@
 from PyQt5 import uic, QtCore
-from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMainWindow, QLineEdit, QPushButton
 
+from Vistas.AGMostrarUsuariosView import AGMostrarUsuarios
+from Vistas.HomeView import Home
 from controlers.AdministradorGeneralControler import AdministradorGeneral
-from controlers.MensajeControler import Ui_Dialog
-from models.Respuesta import Respuesta
 
 
 class LoginAdminGeneral(QMainWindow):
@@ -13,9 +12,10 @@ class LoginAdminGeneral(QMainWindow):
         super(LoginAdminGeneral, self).__init__(parent)
         self.setupUI()
     def setupUI(self):
-        uic.loadUi("Vistas/loginAdminitradorGeneral.ui", self)
+        uic.loadUi("Vistas/ui_files/loginAdminitradorGeneral.ui", self)
         # Configura las flags para eliminar el encabezado y los botones de cierre
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
+
 
         # Definición de componentes
         self.user_name = self.findChild(QLineEdit, 'lineEdit')
@@ -32,10 +32,17 @@ class LoginAdminGeneral(QMainWindow):
     def connectAdministradorGeneral(self, user, password):
         usuarioAdmin = AdministradorGeneral.obtenerUsuarioAdministrador(self, user, password)
         if usuarioAdmin:
-            uic.loadUi("Vistas/Admi.G(mostrarusuarios).ui", self)
+            self.setupMostrarUsuarios()
         else:
-            respuesta = Respuesta("error", "Error!", "Usuario y/o contraseña incorrectos!")
-            Ui_Dialog(respuesta)
             self.findChild(QLineEdit, 'lineEdit').setText("")
             self.findChild(QLineEdit, 'lineEdit_2').setText("")
+
+
+    def setupMostrarUsuarios(self):
+        try:
+            self.mostrarusuarios = AGMostrarUsuarios()
+            self.mostrarusuarios.show()
+            self.hide()
+        except Exception as ex:
+            print(ex)
 
