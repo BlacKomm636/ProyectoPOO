@@ -1,9 +1,10 @@
-from PyQt5 import QtGui, QtCore
+from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QDialog, QPushButton, QLabel
 from PyQt5 import uic
 from PyQt5.QtCore import *
-from models.Respuesta import Respuesta
+
+from models import Pregunta
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -19,24 +20,26 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_DialogMensaje(QDialog):
+class Ui_DialogQuestion(QDialog):
     def __init__(self, Mensaje, parent = None):
-        super(Ui_DialogMensaje, self).__init__(parent)
+        super(Ui_DialogQuestion, self).__init__(parent)
         self.setupUi(Mensaje)
 
-    def setupUi(self, r:Respuesta):
-        uic.loadUi("Vistas/ui_files/mensajes.ui", self)
-        self.setWindowTitle(r.titulo)
+    def setupUi(self, r:Pregunta):
+        uic.loadUi("Vistas/ui_files/question.ui", self)
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
         label = self.findChild(QLabel, "txt_icon")
-        if r.tipo == "error":
-            pixmap = QPixmap("assets/check-mark-error.png")
-        else:
-            pixmap = QPixmap("assets/check-mark-icon.png")
+        pixmap = QPixmap("assets/Question_mark.png")
         label.setPixmap(pixmap)
-        self.findChild(QLabel, "txt_message").setText(r.mensaje)
-        self.findChild(QPushButton, "btn_cerrar").clicked.connect(lambda: self.close())
+        mensaje = self.findChild(QLabel, "txt_message")
+        mensaje.setText(r.mensaje)
+        mensaje.setWordWrap(True)
+        self.findChild(QPushButton, "btnAprobar").clicked.connect(lambda: self.r.aprobar)
+        self.findChild(QPushButton, "btnRechazar").clicked.connect(lambda: self.close())
         self.show()
+
+    def cerrarAplicacion(self):
+        QtWidgets.QApplication.quit()
 
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
