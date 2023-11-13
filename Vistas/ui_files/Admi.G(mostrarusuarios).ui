@@ -87,7 +87,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/simbolomas.svg</normaloff>../Imagenes proyecto/simbolomas.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnVerLocales">
@@ -112,7 +112,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/mostrarusuario.svg</normaloff>../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnMostrarUsuarios">
@@ -137,7 +137,7 @@ background-color: #689A9A;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/mostrarusuario.svg</normaloff>../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnVentas">
@@ -162,7 +162,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnLogout">
@@ -187,7 +187,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/cerrarsesion.svg</normaloff>../Imagenes proyecto/cerrarsesion.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnBack">
@@ -223,7 +223,32 @@ background-color: rgb(109, 107, 56);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/regresar.svg</normaloff>../Imagenes proyecto/regresar.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../../Imagenes proyecto/regresar.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCrearUsuario_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>Crear Locales</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
       </property>
      </widget>
     </widget>
@@ -247,7 +272,7 @@ background-color: rgb(109, 107, 56);
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Imagenes proyecto/x-solid.svg</normaloff>../Imagenes proyecto/x-solid.svg</iconset>
+       <normaloff>../../../../../Imagenes proyecto/x-solid.svg</normaloff>../../../../../Imagenes proyecto/x-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="btnMinimizar">
@@ -270,7 +295,7 @@ background-color: rgb(109, 107, 56);
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Imagenes proyecto/minus-solid.svg</normaloff>../Imagenes proyecto/minus-solid.svg</iconset>
+       <normaloff>../../../../../Imagenes proyecto/minus-solid.svg</normaloff>../../../../../Imagenes proyecto/minus-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QWidget" name="verticalLayoutWidget">
@@ -386,7 +411,7 @@ background-color: rgb(255, 255, 255);</string>
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../../assets/imagenvista.jpg</pixmap>
+           <pixmap>../../../../../../assets/imagenvista.jpg</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -521,7 +546,7 @@ border: 1px solid #1B1B1B
      <x>0</x>
      <y>0</y>
      <width>1127</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>601</width>
-      <height>421</height>
+      <width>831</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -32,8 +32,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>171</width>
-       <height>451</height>
+       <width>201</width>
+       <height>551</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -43,7 +43,7 @@
      <widget class="QLabel" name="label_39">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>60</x>
         <y>30</y>
         <width>71</width>
         <height>71</height>
@@ -62,7 +62,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../imagen.png</pixmap>
+       <pixmap>../../../../../OneDrive/Documentos/Isa/POO/Imagenes proyecto/imagenAdministradorGeneral.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -72,132 +72,6 @@
       </property>
       <property name="openExternalLinks">
        <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_43">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>100</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 87 7pt &quot;Arial Black&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Administrador General</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_24">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>140</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 5px;
-font: 87 5pt &quot;Arial Black&quot;;
-background-color: rgb(191, 191, 191);</string>
-      </property>
-      <property name="text">
-       <string>   Crear Usuario</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../Imagenes proyecto/simbolomas.svg</normaloff>../Imagenes proyecto/simbolomas.svg</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_25">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>170</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 5px;
-font: 87 5pt &quot;Arial Black&quot;;
-background-color: rgb(191, 191, 191);</string>
-      </property>
-      <property name="text">
-       <string>    Ver locales</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../Imagenes proyecto/mostrarusuario.svg</normaloff>../Imagenes proyecto/mostrarusuario.svg</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_26">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>200</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 5px;
-font: 87 5pt &quot;Arial Black&quot;;
-background-color: rgb(191, 191, 191);</string>
-      </property>
-      <property name="text">
-       <string>mostrar usuarios</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../Imagenes proyecto/mostrarusuario.svg</normaloff>../Imagenes proyecto/mostrarusuario.svg</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_27">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>230</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 5px;
-font: 87 5pt &quot;Arial Black&quot;;
-background-color: rgb(191, 191, 191);</string>
-      </property>
-      <property name="text">
-       <string>            Ventas</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../Imagenes proyecto/carritodeventas.svg</normaloff>../Imagenes proyecto/carritodeventas.svg</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_28">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>260</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 5px;
-font: 87 5pt &quot;Arial Black&quot;;
-background-color: rgb(191, 191, 191);</string>
-      </property>
-      <property name="text">
-       <string>Cerrar Sesion</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../Imagenes proyecto/cerrarsesion.svg</normaloff>../Imagenes proyecto/cerrarsesion.svg</iconset>
       </property>
      </widget>
      <widget class="QLabel" name="label_45">
@@ -216,7 +90,7 @@ background-color: rgb(191, 191, 191);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../logo.png</pixmap>
+       <pixmap>../../../../../../../logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -243,7 +117,7 @@ background-color: rgb(109, 107, 56);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Imagenes proyecto/regresar.svg</normaloff>../Imagenes proyecto/regresar.svg</iconset>
+        <normaloff>../../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../../Imagenes proyecto/regresar.svg</iconset>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -251,7 +125,7 @@ background-color: rgb(109, 107, 56);
        <rect>
         <x>20</x>
         <y>120</y>
-        <width>131</width>
+        <width>161</width>
         <height>16</height>
        </rect>
       </property>
@@ -270,24 +144,180 @@ color: #FFFFFF;</string>
        <string>______________________________</string>
       </property>
      </widget>
-     <zorder>pushButton_27</zorder>
-     <zorder>label_39</zorder>
-     <zorder>label_43</zorder>
-     <zorder>pushButton_24</zorder>
-     <zorder>pushButton_25</zorder>
-     <zorder>pushButton_26</zorder>
-     <zorder>pushButton_28</zorder>
-     <zorder>label_45</zorder>
-     <zorder>pushButton_29</zorder>
-     <zorder>label</zorder>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 10pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Administrador General</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCrearUsuario_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>Crear Usuario</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnVerLocales_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>Ver locales</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnventas">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: #689A9A;</string>
+      </property>
+      <property name="text">
+       <string>Ventas</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnMostrarUsuarios">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>mostrar Usuarios</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCrearUsuario_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>Crear Locales</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnLogout_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 5px;
+font: 87 8pt &quot;Arial Black&quot;;
+background-color: rgb(191, 191, 191);</string>
+      </property>
+      <property name="text">
+       <string>Cerrar Sesion</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="widget_13" native="true">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>60</y>
-       <width>361</width>
-       <height>311</height>
+       <x>260</x>
+       <y>50</y>
+       <width>431</width>
+       <height>401</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -298,10 +328,10 @@ border:2px soild #6B675A;</string>
      <widget class="QWidget" name="widget_16" native="true">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>280</y>
-        <width>161</width>
-        <height>16</height>
+        <x>110</x>
+        <y>349</y>
+        <width>221</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -312,14 +342,15 @@ border:2px soild #6B675A;</string>
       <widget class="QLabel" name="label_66">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>0</y>
+         <x>20</x>
+         <y>10</y>
          <width>31</width>
          <height>16</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
+        <string notr="true">
+font: 10pt &quot;MS Shell Dlg 2&quot;;
 </string>
        </property>
        <property name="text">
@@ -329,9 +360,9 @@ border:2px soild #6B675A;</string>
       <widget class="QLabel" name="label_13">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>0</y>
-         <width>91</width>
+         <x>70</x>
+         <y>10</y>
+         <width>121</width>
          <height>16</height>
         </rect>
        </property>
@@ -364,7 +395,7 @@ border:2px soild #6B675A;</string>
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>321</width>
+        <width>401</width>
         <height>121</height>
        </rect>
       </property>
@@ -377,16 +408,16 @@ border-radius: 30px;</string>
       <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
-         <x>2</x>
+         <x>10</x>
          <y>40</y>
-         <width>21</width>
+         <width>31</width>
          <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -394,7 +425,7 @@ border-radius: 30px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border: none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Local</string>
@@ -405,14 +436,14 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>60</x>
          <y>10</y>
-         <width>91</width>
+         <width>101</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -420,7 +451,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Administrador local</string>
@@ -438,7 +469,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -446,7 +477,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Total:</string>
@@ -456,7 +487,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>40</y>
+         <y>60</y>
          <width>16</width>
          <height>16</height>
         </rect>
@@ -468,10 +499,10 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>10</y>
-         <width>131</width>
-         <height>16</height>
+         <x>170</x>
+         <y>6</y>
+         <width>201</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -525,7 +556,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -533,7 +564,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Cocinero</string>
@@ -543,9 +574,9 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>110</x>
-         <y>40</y>
-         <width>181</width>
-         <height>16</height>
+         <y>36</y>
+         <width>251</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -560,7 +591,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>250</x>
          <y>0</y>
-         <width>41</width>
+         <width>131</width>
          <height>31</height>
         </rect>
        </property>
@@ -576,7 +607,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>280</x>
          <y>30</y>
-         <width>31</width>
+         <width>101</width>
          <height>31</height>
         </rect>
        </property>
@@ -599,7 +630,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -607,7 +638,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Fecha:</string>
@@ -632,16 +663,16 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_35">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>200</x>
          <y>70</y>
-         <width>71</width>
+         <width>81</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -649,7 +680,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Ventas Del Dia:</string>
@@ -660,7 +691,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>280</x>
          <y>60</y>
-         <width>31</width>
+         <width>101</width>
          <height>31</height>
         </rect>
        </property>
@@ -674,7 +705,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_16">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>110</x>
          <y>70</y>
          <width>81</width>
          <height>16</height>
@@ -690,9 +721,9 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_17">
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>290</x>
          <y>70</y>
-         <width>61</width>
+         <width>71</width>
          <height>16</height>
         </rect>
        </property>
@@ -706,7 +737,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_18">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>130</x>
          <y>100</y>
          <width>91</width>
          <height>16</height>
@@ -740,7 +771,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>260</x>
          <y>90</y>
-         <width>31</width>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -792,8 +823,8 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>150</y>
-        <width>321</width>
+        <y>170</y>
+        <width>401</width>
         <height>121</height>
        </rect>
       </property>
@@ -806,16 +837,16 @@ border-radius: 30px;</string>
       <widget class="QLabel" name="label_30">
        <property name="geometry">
         <rect>
-         <x>2</x>
+         <x>10</x>
          <y>40</y>
-         <width>21</width>
+         <width>31</width>
          <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -823,7 +854,7 @@ border-radius: 30px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border: none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Local</string>
@@ -834,14 +865,14 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>60</x>
          <y>10</y>
-         <width>91</width>
+         <width>101</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -849,7 +880,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Administrador local</string>
@@ -867,7 +898,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -875,7 +906,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Total:</string>
@@ -885,7 +916,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>40</y>
+         <y>60</y>
          <width>16</width>
          <height>16</height>
         </rect>
@@ -897,10 +928,10 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_19">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>10</y>
-         <width>131</width>
-         <height>16</height>
+         <x>170</x>
+         <y>6</y>
+         <width>201</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -954,7 +985,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -962,7 +993,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Cocinero</string>
@@ -972,9 +1003,9 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>110</x>
-         <y>40</y>
-         <width>181</width>
-         <height>16</height>
+         <y>36</y>
+         <width>251</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -989,7 +1020,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>250</x>
          <y>0</y>
-         <width>41</width>
+         <width>131</width>
          <height>31</height>
         </rect>
        </property>
@@ -1005,7 +1036,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>280</x>
          <y>30</y>
-         <width>31</width>
+         <width>101</width>
          <height>31</height>
         </rect>
        </property>
@@ -1028,7 +1059,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -1036,7 +1067,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Fecha:</string>
@@ -1058,19 +1089,19 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="QLabel" name="label_44">
+      <widget class="QLabel" name="label_43">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>200</x>
          <y>70</y>
-         <width>71</width>
+         <width>81</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
-         <pointsize>7</pointsize>
+         <pointsize>9</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -1078,7 +1109,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
-font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Ventas Del Dia:</string>
@@ -1089,7 +1120,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>280</x>
          <y>60</y>
-         <width>31</width>
+         <width>101</width>
          <height>31</height>
         </rect>
        </property>
@@ -1103,7 +1134,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_21">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>110</x>
          <y>70</y>
          <width>81</width>
          <height>16</height>
@@ -1119,9 +1150,9 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_22">
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>290</x>
          <y>70</y>
-         <width>61</width>
+         <width>71</width>
          <height>16</height>
         </rect>
        </property>
@@ -1135,7 +1166,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
       <widget class="QLabel" name="label_23">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>130</x>
          <y>100</y>
          <width>91</width>
          <height>16</height>
@@ -1169,7 +1200,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>260</x>
          <y>90</y>
-         <width>31</width>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -1180,35 +1211,35 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
+      <zorder>line_33</zorder>
       <zorder>line_32</zorder>
       <zorder>line_30</zorder>
+      <zorder>line_29</zorder>
       <zorder>line_26</zorder>
+      <zorder>line_28</zorder>
       <zorder>label_30</zorder>
       <zorder>label_37</zorder>
       <zorder>label_38</zorder>
       <zorder>label_40</zorder>
+      <zorder>label_19</zorder>
       <zorder>line_27</zorder>
       <zorder>label_41</zorder>
       <zorder>label_20</zorder>
-      <zorder>line_28</zorder>
-      <zorder>line_29</zorder>
       <zorder>label_42</zorder>
-      <zorder>label_44</zorder>
+      <zorder>label_43</zorder>
       <zorder>line_31</zorder>
       <zorder>label_21</zorder>
       <zorder>label_22</zorder>
       <zorder>label_23</zorder>
-      <zorder>line_33</zorder>
-      <zorder>label_19</zorder>
      </widget>
     </widget>
     <widget class="QPushButton" name="pushButton_35">
      <property name="geometry">
       <rect>
-       <x>580</x>
+       <x>770</x>
        <y>0</y>
-       <width>21</width>
-       <height>23</height>
+       <width>31</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1219,16 +1250,16 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Imagenes proyecto/x-solid.svg</normaloff>../Imagenes proyecto/x-solid.svg</iconset>
+       <normaloff>../../../../../Imagenes proyecto/x-solid.svg</normaloff>../../../../../Imagenes proyecto/x-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_36">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>740</x>
        <y>0</y>
-       <width>21</width>
-       <height>23</height>
+       <width>31</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1239,27 +1270,7 @@ font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Imagenes proyecto/window-restore-regular.svg</normaloff>../Imagenes proyecto/window-restore-regular.svg</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_37">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>0</y>
-       <width>21</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(109, 107, 56);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../Imagenes proyecto/minus-solid.svg</normaloff>../Imagenes proyecto/minus-solid.svg</iconset>
+       <normaloff>../../../../../Imagenes proyecto/window-restore-regular.svg</normaloff>../../../../../Imagenes proyecto/window-restore-regular.svg</iconset>
      </property>
     </widget>
    </widget>
