@@ -1,9 +1,10 @@
 from PyQt5 import uic, QtCore
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QMainWindow, QPushButton
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QVBoxLayout, QLineEdit, QLabel
 
 from Vistas.AGCrearUsuariosView import AGCrearUsuarios
 from controlers.QuestionControler import Ui_DialogQuestion
+from controlers.UsuarioControler import UsuarioControler
 from models.Pregunta import Pregunta
 
 
@@ -23,12 +24,32 @@ class AGMostrarUsuarios(QMainWindow):
         self.logout = self.findChild(QPushButton, "btnLogout")
         self.minimizar = self.findChild(QPushButton, "btnMinimizar")
 
+        self.component = self.findChild(QWidget, "wUsers")
+        self.layout = self.findChild(QVBoxLayout, "verticalLayoutUsers")
+
+        self.nombre = self.findChild(QLabel, "labelNombre")
+        self.id = self.findChild(QLabel, "labelId")
+        self.local = self.findChild(QLabel, "labelLocal")
+        self.rol = self.findChild(QLabel, "labelRol")
+
+
         #Eventos
         self.salir.setIcon(QIcon("assets/x-solid.svg"))
         self.minimizar.setIcon(QIcon("assets/minus-solid.svg"))
         self.crearUsuario.clicked.connect(self.mostrarCrearUsuarios)
         self.salir.clicked.connect(self.exitApp)
         self.minimizar.clicked.connect(self.showMinimized)
+
+
+        usuarios = UsuarioControler.leerDatos(self)
+        for obj in usuarios:
+            self.layout.addWidget(self.component)
+            self.nombre.setText(obj.nombre)
+            self.id.setText(obj.id)
+            self.local.setText(obj.local)
+            self.rol.setText(obj.rol)
+        self.component.setLayout(self.layout)
+        print(usuarios)
 
     def mostrarCrearUsuarios(self):
         try:

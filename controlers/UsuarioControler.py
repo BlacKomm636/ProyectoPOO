@@ -47,7 +47,7 @@ class UsuarioControler():
     def leerDatos(self):
         try:
             cursor = bd.conexion.cursor()
-            sql = "SELECT nombre, apellido, cedula, id_usuario , local, telefono, contrasena, estado, rol  FROM usuarios;"
+            sql = "SELECT id, nombre, apellido, cedula, local, telefono, contrasena, estado, rol  FROM usuarios;"
             cursor.execute(sql)
             bd.conexion.commit()
             usuarios = cursor.fetchall()
