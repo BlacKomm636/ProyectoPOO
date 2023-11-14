@@ -62,7 +62,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../../../../../imagen.png</pixmap>
+       <pixmap>../../../../imagen.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -109,10 +109,10 @@ background-color: #689A9A;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../Imagenes proyecto/simbolomas.svg</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnVerLocales_3">
+     <widget class="QPushButton" name="btnVerLocales">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -131,7 +131,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnMostrarUsuarios_3">
@@ -153,10 +153,10 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnVentas_5">
+     <widget class="QPushButton" name="btnVentas">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -175,10 +175,10 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnLogout_3">
+     <widget class="QPushButton" name="btnLogout">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -197,10 +197,10 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnBack_3">
+     <widget class="QPushButton" name="btnBack">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -221,7 +221,7 @@ background-color: rgb(109, 107, 56);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../../Imagenes proyecto/regresar.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../Imagenes proyecto/regresar.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnCrearLocales">
@@ -243,11 +243,11 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="btnExit_2">
+    <widget class="QPushButton" name="btnExit">
      <property name="geometry">
       <rect>
        <x>1090</x>
@@ -264,10 +264,10 @@ background-color: rgb(191, 191, 191);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../../../assets/x-solid.svg</normaloff>../../../../../../assets/x-solid.svg</iconset>
+       <normaloff>../../../../assets/x-solid.svg</normaloff>../../../../assets/x-solid.svg</iconset>
      </property>
     </widget>
-    <widget class="QPushButton" name="btnMin_2">
+    <widget class="QPushButton" name="btnMin">
      <property name="geometry">
       <rect>
        <x>1060</x>
@@ -284,7 +284,7 @@ background-color: rgb(191, 191, 191);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../../../assets/minus-solid.svg</normaloff>../../../../../../assets/minus-solid.svg</iconset>
+       <normaloff>../../../../assets/minus-solid.svg</normaloff>../../../../assets/minus-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_50">
@@ -396,7 +396,7 @@ background-color: rgb(186, 186, 186);</string>
      <widget class="QLineEdit" name="lineEditProducto">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>320</x>
         <y>80</y>
         <width>141</width>
         <height>20</height>
@@ -411,7 +411,7 @@ background-color: rgb(186, 186, 186);</string>
        <rect>
         <x>140</x>
         <y>80</y>
-        <width>161</width>
+        <width>171</width>
         <height>16</height>
        </rect>
       </property>
@@ -420,20 +420,24 @@ background-color: rgb(186, 186, 186);</string>
 background-color: rgb(186, 186, 186);</string>
       </property>
       <property name="text">
-       <string>Especifique su comida favorita</string>
+       <string>Especifique los productos a añadir</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="Agregar">
+     <widget class="QPushButton" name="btnAgregar">
       <property name="geometry">
        <rect>
         <x>340</x>
         <y>110</y>
         <width>71</width>
-        <height>16</height>
+        <height>21</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(213, 213, 213);</string>
+       <string notr="true">background-color: rgb(213, 213, 213);
+border-radius: 10px;</string>
       </property>
       <property name="text">
        <string>Agregar</string>
@@ -452,21 +456,21 @@ background-color: rgb(186, 186, 186);</string>
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEditNumeroLocal_2">
+     <widget class="QWidget" name="widget" native="true">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>120</x>
         <y>70</y>
-        <width>351</width>
-        <height>221</height>
+        <width>371</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-radius:2px;
-background-color: rgb(186, 186, 186);</string>
+       <string notr="true">background-color: #BABABA;
+border-radius: 10px;</string>
       </property>
      </widget>
-     <zorder>lineEditNumeroLocal_2</zorder>
+     <zorder>widget</zorder>
      <zorder>label_51</zorder>
      <zorder>label_52</zorder>
      <zorder>label_53</zorder>
@@ -474,10 +478,10 @@ background-color: rgb(186, 186, 186);</string>
      <zorder>lineEditNumeroLocal</zorder>
      <zorder>lineEditProducto</zorder>
      <zorder>label_54</zorder>
-     <zorder>Agregar</zorder>
+     <zorder>btnAgregar</zorder>
      <zorder>listWidgetProductos</zorder>
     </widget>
-    <widget class="QPushButton" name="btnCancelar_2">
+    <widget class="QPushButton" name="btnCancelar">
      <property name="geometry">
       <rect>
        <x>660</x>
@@ -494,7 +498,7 @@ border-radius: 10px;</string>
       <string>Cancelar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btnGuardar_2">
+    <widget class="QPushButton" name="btnGuardar">
      <property name="geometry">
       <rect>
        <x>550</x>
@@ -515,11 +519,11 @@ border-radius: 10px;</string>
     </widget>
     <zorder>widget_14</zorder>
     <zorder>widget_12</zorder>
-    <zorder>btnExit_2</zorder>
-    <zorder>btnMin_2</zorder>
+    <zorder>btnExit</zorder>
+    <zorder>btnMin</zorder>
     <zorder>label_50</zorder>
-    <zorder>btnCancelar_2</zorder>
-    <zorder>btnGuardar_2</zorder>
+    <zorder>btnCancelar</zorder>
+    <zorder>btnGuardar</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -528,7 +532,7 @@ border-radius: 10px;</string>
      <x>0</x>
      <y>0</y>
      <width>1130</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

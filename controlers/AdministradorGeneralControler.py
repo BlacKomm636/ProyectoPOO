@@ -43,6 +43,7 @@ class AdministradorGeneral():
                         valido = True
                         respuesta = Respuesta("success", "Éxito!", "Bienvenido " + tupla[1][1])
 
+            cursor.close()
             return valido
 
         except psycopg2.Error as e:

@@ -3,6 +3,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QVBoxLayout, QLineEdit, QLabel
 
 from Vistas.AGCrearUsuariosView import AGCrearUsuarios
+from Vistas.AGCrearLocalesView import AGCrearLocales
 from controlers.QuestionControler import Ui_DialogQuestion
 from controlers.UsuarioControler import UsuarioControler
 from models.Pregunta import Pregunta
@@ -23,6 +24,7 @@ class AGMostrarUsuarios(QMainWindow):
         self.ventas = self.findChild(QPushButton, "btnVentas")
         self.logout = self.findChild(QPushButton, "btnLogout")
         self.minimizar = self.findChild(QPushButton, "btnMinimizar")
+        self.crearLocales = self.findChild(QPushButton, "btnCrearLocales")
 
         self.component = self.findChild(QWidget, "wUsers")
         self.layout = self.findChild(QVBoxLayout, "verticalLayoutUsers")
@@ -39,22 +41,30 @@ class AGMostrarUsuarios(QMainWindow):
         self.crearUsuario.clicked.connect(self.mostrarCrearUsuarios)
         self.salir.clicked.connect(self.exitApp)
         self.minimizar.clicked.connect(self.showMinimized)
+        self.crearLocales.clicked.connect(self.mostrarCrearLocales)
 
 
         usuarios = UsuarioControler.leerDatos(self)
-        for obj in usuarios:
-            self.layout.addWidget(self.component)
-            self.nombre.setText(obj.nombre)
-            self.id.setText(obj.id)
-            self.local.setText(obj.local)
-            self.rol.setText(obj.rol)
-        self.component.setLayout(self.layout)
+        #for obj in usuarios:
+            #self.layout.addWidget(self.component)
+            #self.nombre.setText(obj.nombre)
+            #self.id.setText(obj.id)
+            #self.local.setText(obj.local)
+            #self.rol.setText(obj.rol)
+        #self.component.setLayout(self.layout)
         print(usuarios)
 
     def mostrarCrearUsuarios(self):
         try:
             self.agCrearUsuarios = AGCrearUsuarios()
             self.agCrearUsuarios.show()
+        except Exception as ex:
+            print(ex)
+
+    def mostrarCrearLocales(self):
+        try:
+            self.agCrearLocales = AGCrearLocales()
+            self.agCrearLocales.show()
         except Exception as ex:
             print(ex)
 

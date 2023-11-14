@@ -25,7 +25,6 @@ class UsuarioControler():
             bd.conexion.commit()  # Confirmamos la transacción
             print("Usuario creado exitosamente")
             cursor.close()
-            bd.conexion.close()
             return valido  # Devolvemos True para indicar que la operación fue exitosa
         except psycopg2.Error as e:
             print("Error al crear usuario", e)
@@ -41,7 +40,6 @@ class UsuarioControler():
                 nombres_roles = [tupla[1] for tupla in roles]
                 return nombres_roles
             cursor.close()
-            bd.conexion.close()
         except psycopg2.Error as e:
             return e
     def leerDatos(self):
@@ -52,7 +50,6 @@ class UsuarioControler():
             bd.conexion.commit()
             usuarios = cursor.fetchall()
             cursor.close()
-            bd.conexion.close()
             return usuarios
         except psycopg2.Error as e:
             print("Error al leer los datos del usuario", e)
@@ -66,7 +63,6 @@ class UsuarioControler():
             cursor.execute(consulta, id_usuario)
             bd.conexion.commit()
             cursor.close()
-            bd.conexion.close()
         except psycopg2.Error as e:
             print("Error al eliminar los datos del usuario", e)
             return e

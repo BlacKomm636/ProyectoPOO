@@ -91,5 +91,6 @@ class AGCrearUsuarios(QMainWindow):
                 mensaje = Respuesta("Error", "Error!", "La contraseña no coincide, revise los campos de contraseña y confirmar contraseña!")
                 Ui_DialogMensaje(mensaje)
 
+            self.hide()
         except Exception as ex:
             print(ex)

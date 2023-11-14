@@ -5,18 +5,20 @@ from controlers.MensajeControler import Ui_DialogMensaje
 from controlers.UsuarioControler import UsuarioControler
 from models.Respuesta import Respuesta
 from models.Usuario import Usuario
+from models.Local import Local
+from controlers.LocalControler import LocalControler
 
 class AGCrearLocales(QMainWindow):
     def __init__(self,parent=None):
         super(AGCrearLocales, self).__init__(parent)
         self.setupUI()
-    def setupIU(self):
-        uic.loadUi("Vistas/iu_files/Admi.G(crearlocales).iu",self)
+    def setupUI(self):
+        uic.loadUi("Vistas/ui_files/Admi.G(crearlocales).ui",self)
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
 
-        self.CrearLocales=self.findChild(QPushButton,"btnCrearLocales_6")
+        self.CrearLocales=self.findChild(QPushButton,"btnCrearLocales")
         self.CrearUsuarios=self.findChild(QPushButton,"btnCrearUsuario")
-        self.locales=self.findChild(QPushButton, "btnVerLocales_3")
+        self.locales=self.findChild(QPushButton, "btnVerLocales")
         self.salir = self.findChild(QPushButton, "btnExit")
         self.ventas = self.findChild(QPushButton, "btnVentas")
         self.logout = self.findChild(QPushButton, "btnLogout")
@@ -26,22 +28,54 @@ class AGCrearLocales(QMainWindow):
 
         #local
         self.nombreNegocio=self.findChild(QLineEdit,"lineEditNombreNegocio")
-        self.numeroLocal = self.findChild(QLineEdit, "lineEditNombreNegocio")
+        self.numeroLocal = self.findChild(QLineEdit, "lineEditNumeroLocal")
 
         #productos
 
-        self.ListadeProductos=self.findChild(QListWidget, "listWidgetProductos")
-        self.EspecificarProducto=self.findChild(QLineEdit, "lineEditProducto")
-        self.Agregar=self.findChild(QPushButton, "Agregar")
+        self.listadeProductos=self.findChild(QListWidget, "listWidgetProductos")
+        self.especificarProducto=self.findChild(QLineEdit, "lineEditProducto")
+        self.agregar=self.findChild(QPushButton, "btnAgregar")
 
         #Eventos
-    def LocalControler(self):
 
-       #Lo que indica el video
-       comida=self.iu.txt_comida.text()
-       self.ui.lst_comida.addItem(comida)
-       self.iu.txt_comida.setText('')
-       self.iu.txt_comida.setFocus()
+        self.agregar.clicked.connect(self.localControler)
+
+        self.guardar.clicked.connect(lambda: self.agregarLocalConProductos(self.nombreNegocio.text(), self.numeroLocal.text(), self.listadeProductos, True))
+
+    def localControler(self):
+
+       comida = self.especificarProducto.text()
+       self.listadeProductos.addItem(comida)
+       self.especificarProducto.setText('')
+       self.especificarProducto.setFocus()
+
+    def agregarLocalConProductos(self, nombre, numero, productos, estado):
+        elements = []
+        for i in range(productos.count()):
+            item = productos.item(i)
+            elements.append(item.text())
+        if nombre != None and numero != None:
+            local:Local = {
+                "id_local": 0,
+                "nombre": nombre,
+                "numero": numero,
+                "productos": elements,
+                "estado": estado
+            }
+
+            print(local)
+            self.localCreado = LocalControler.crearLocal(self, local)
+            if self.localCreado:
+                mensaje = Respuesta("Success", "Exito!",
+                                    "Local creado correctamente!")
+                Ui_DialogMensaje(mensaje)
+                self.hide()
+            else:
+                mensaje = Respuesta("Error", "Error!",
+                                    "Error al crear el local, revise la información suministrada.")
+                Ui_DialogMensaje(mensaje)
+
+
 
 
 
