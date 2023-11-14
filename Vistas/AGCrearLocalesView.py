@@ -7,6 +7,7 @@ from models.Respuesta import Respuesta
 from models.Usuario import Usuario
 from models.Local import Local
 from controlers.LocalControler import LocalControler
+from models.Pregunta import Pregunta
 
 class AGCrearLocales(QMainWindow):
     def __init__(self,parent=None):
@@ -41,6 +42,8 @@ class AGCrearLocales(QMainWindow):
         self.agregar.clicked.connect(self.localControler)
 
         self.guardar.clicked.connect(lambda: self.agregarLocalConProductos(self.nombreNegocio.text(), self.numeroLocal.text(), self.listadeProductos, True))
+        self.cancelar.clicked.connect(self.hide)
+        self.salir.clicked.connect(self.exitApp)
 
     def localControler(self):
 
@@ -63,7 +66,6 @@ class AGCrearLocales(QMainWindow):
                 "estado": estado
             }
 
-            print(local)
             self.localCreado = LocalControler.crearLocal(self, local)
             if self.localCreado:
                 mensaje = Respuesta("Success", "Exito!",
@@ -74,6 +76,10 @@ class AGCrearLocales(QMainWindow):
                 mensaje = Respuesta("Error", "Error!",
                                     "Error al crear el local, revise la información suministrada.")
                 Ui_DialogMensaje(mensaje)
+
+    def exitApp(self):
+        mensaje = Pregunta("Question","Salir", "Está seguro de que desea cerrar sesión y salir de la aplicación?", "cerrarAplicacion")
+        Ui_DialogQuestion(mensaje)
 
 
 

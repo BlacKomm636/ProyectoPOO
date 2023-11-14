@@ -134,7 +134,7 @@ background-color: rgb(191, 191, 191);</string>
         <normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnMostrarUsuarios_3">
+     <widget class="QPushButton" name="btnMostrarUsuarios">
       <property name="geometry">
        <rect>
         <x>10</x>

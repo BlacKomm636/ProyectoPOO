@@ -27,17 +27,16 @@ class LocalControler():
             print("Error al crear local", e)
             return e  # Devolvemos False en caso de error
 
-    def ObtenerRoles(self):
+    def ObtenerLocales(self):
         try:
             cursor = bd.conexion.cursor()
-            consulta = "SELECT id, nombre_rol, estado FROM roles ORDER BY id ASC"
+            consulta = "SELECT id, nombre, numero, estado, productos FROM local ORDER BY id ASC"
             cursor.execute(consulta)
-            roles = cursor.fetchall()
-            if roles:
-                nombres_roles = [tupla[1] for tupla in roles]
-                return nombres_roles
+            locales = cursor.fetchall()
+            if locales:
+                nombres_locales = [tupla[1] for tupla in locales]
+                return nombres_locales
             cursor.close()
-            bd.conexion.close()
         except psycopg2.Error as e:
             return e
     def leerDatos(self):

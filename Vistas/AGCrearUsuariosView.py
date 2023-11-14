@@ -3,8 +3,10 @@ from PyQt5.QtWidgets import QMainWindow, QPushButton, QLineEdit, QCheckBox, QCom
 
 from controlers.MensajeControler import Ui_DialogMensaje
 from controlers.UsuarioControler import UsuarioControler
+from controlers.LocalControler import LocalControler
 from models.Respuesta import Respuesta
 from models.Usuario import Usuario
+from models.Pregunta import Pregunta
 
 
 class AGCrearUsuarios(QMainWindow):
@@ -34,35 +36,30 @@ class AGCrearUsuarios(QMainWindow):
         self.telefono = self.findChild(QLineEdit, "lineEditTelefono")
         self.password = self.findChild(QLineEdit, "lineEditContrasena")
         self.confirmPass = self.findChild(QLineEdit, "lineEditConfirmPass")
-        self.createLocalByUser = self.findChild(QCheckBox, "checkBoxCrearLocal")
-
-        #Local
-        self.nombreNegocio = self.findChild(QLineEdit, "lineEditNombreNegocio")
-        self.numeroLocal = self.findChild(QLineEdit, "lineEditNumeroLocal")
-        self.productos = self.findChild(QLineEdit, "lineEditProductos")
 
         self.roles = self.findChild(QComboBox, "comboBoxRol")
+        self.local = self.findChild(QComboBox, "comboBoxLocal")
 
         #Eventos
         self.password.setEchoMode(QLineEdit.Password)
         self.confirmPass.setEchoMode(QLineEdit.Password)
         self.listaRoles = UsuarioControler.ObtenerRoles(self)
+        self.listaLocales = LocalControler.ObtenerLocales(self)
         self.roles.addItems(self.listaRoles)
+        self.local.addItems(self.listaLocales)
 
-        if self.createLocalByUser.isChecked():
-            self.newRol = "Administrador Local"
-        else:
-            self.newRol = self.roles.currentText()
+        self.cancelar.clicked.connect(self.hide)
+        self.salir.clicked.connect(self.exitApp)
 
         self.guardar.clicked.connect(lambda: self.crearUsuarioPorAdministrador(
             self.name.text(),
             self.apellido.text(),
             self.identificacion.text(),
-            self.nombreNegocio.text(),
+            self.local.currentText(),
             self.telefono.text(),
             self.password.text(),
             self.confirmPass.text(),
-            self.newRol
+            self.roles.currentText()
             ))
     def crearUsuarioPorAdministrador(self, nombre, apellido, cedula, local, telefono, contrasena, confirmPass, rol):
         try:
@@ -83,6 +80,7 @@ class AGCrearUsuarios(QMainWindow):
                     mensaje = Respuesta("Success", "Exito!",
                                         "Usuario creado correctamente!")
                     Ui_DialogMensaje(mensaje)
+                    self.hide()
                 else:
                     mensaje = Respuesta("Error", "Error!",
                                         "Error al crear el usuario, revise la información suministrada.")
@@ -90,7 +88,9 @@ class AGCrearUsuarios(QMainWindow):
             else:
                 mensaje = Respuesta("Error", "Error!", "La contraseña no coincide, revise los campos de contraseña y confirmar contraseña!")
                 Ui_DialogMensaje(mensaje)
-
-            self.hide()
         except Exception as ex:
             print(ex)
+
+    def exitApp(self):
+        mensaje = Pregunta("Question","Salir", "Está seguro de que desea cerrar sesión y salir de la aplicación?", "cerrarAplicacion")
+        Ui_DialogQuestion(mensaje)

@@ -1,6 +1,6 @@
 from PyQt5 import uic, QtCore
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QVBoxLayout, QLineEdit, QLabel
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QVBoxLayout, QLineEdit, QLabel, QTableWidget, QTableWidgetItem
 
 from Vistas.AGCrearUsuariosView import AGCrearUsuarios
 from Vistas.AGCrearLocalesView import AGCrearLocales
@@ -34,6 +34,8 @@ class AGMostrarUsuarios(QMainWindow):
         self.local = self.findChild(QLabel, "labelLocal")
         self.rol = self.findChild(QLabel, "labelRol")
 
+        self.tableUsuarios = self.findChild(QTableWidget, "tableWidgetUsuarios")
+
 
         #Eventos
         self.salir.setIcon(QIcon("assets/x-solid.svg"))
@@ -43,16 +45,16 @@ class AGMostrarUsuarios(QMainWindow):
         self.minimizar.clicked.connect(self.showMinimized)
         self.crearLocales.clicked.connect(self.mostrarCrearLocales)
 
+        self.tableUsuarios.setRowCount(10)
+        self.tableUsuarios.setColumnCount(6)
+        self.tableUsuarios.setHorizontalHeaderLabels(('Nombre', 'Apellido', 'Local', 'Teléfono', 'Rol','Acciones'))
+        self.tableUsuarios.setColumnWidth(0,120)
 
         usuarios = UsuarioControler.leerDatos(self)
-        #for obj in usuarios:
-            #self.layout.addWidget(self.component)
-            #self.nombre.setText(obj.nombre)
-            #self.id.setText(obj.id)
-            #self.local.setText(obj.local)
-            #self.rol.setText(obj.rol)
-        #self.component.setLayout(self.layout)
-        print(usuarios)
+        for i in range(len(usuarios)):
+            for j in range(len(usuarios[i])):
+                print(usuarios[i][j])
+                self.tableUsuarios.setItem(i, j, QTableWidgetItem(usuarios[i][j]))
 
     def mostrarCrearUsuarios(self):
         try:

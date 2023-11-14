@@ -62,7 +62,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../../../../../imagen.png</pixmap>
+       <pixmap>../../../../imagen.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -109,7 +109,7 @@ background-color: #689A9A;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../../Imagenes proyecto/simbolomas.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/simbolomas.svg</normaloff>../../../../Imagenes proyecto/simbolomas.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnVerLocales">
@@ -131,7 +131,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnMostrarUsuarios">
@@ -153,7 +153,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</normaloff>../../../../Imagenes proyecto/mostrarusuario.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnVentas">
@@ -175,7 +175,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnLogout">
@@ -197,7 +197,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cerrarsesion.svg</normaloff>../../../../Imagenes proyecto/cerrarsesion.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnBack">
@@ -221,7 +221,7 @@ background-color: rgb(109, 107, 56);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../../Imagenes proyecto/regresar.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/regresar.svg</normaloff>../../../../Imagenes proyecto/regresar.svg</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="btnVentas_2">
@@ -243,7 +243,7 @@ background-color: rgb(191, 191, 191);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
+        <normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</normaloff>../../../../Imagenes proyecto/cart-shopping-solid.svg</iconset>
       </property>
      </widget>
     </widget>
@@ -517,7 +517,7 @@ background-color: rgb(186, 186, 186);</string>
        <string>Local</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBoxRol_2">
+     <widget class="QComboBox" name="comboBoxLocal">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -549,7 +549,7 @@ background-color: rgb(186, 186, 186);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../../../assets/x-solid.svg</normaloff>../../../../../../assets/x-solid.svg</iconset>
+       <normaloff>../../../../assets/x-solid.svg</normaloff>../../../../assets/x-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="btnMin">
@@ -569,7 +569,7 @@ background-color: rgb(186, 186, 186);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../../../assets/minus-solid.svg</normaloff>../../../../../../assets/minus-solid.svg</iconset>
+       <normaloff>../../../../assets/minus-solid.svg</normaloff>../../../../assets/minus-solid.svg</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_35">
@@ -632,7 +632,7 @@ border-radius: 10px;</string>
      <x>0</x>
      <y>0</y>
      <width>1123</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
