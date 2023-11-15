@@ -284,15 +284,31 @@ background-color: rgb(191, 191, 191);</string>
          <property name="geometry">
           <rect>
            <x>25</x>
-           <y>10</y>
-           <width>681</width>
-           <height>361</height>
+           <y>60</y>
+           <width>851</width>
+           <height>351</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
 border-radius:30px;
 border:2px soild #6B675A;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 87 10pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Usuarios creados</string>
          </property>
         </widget>
        </widget>
