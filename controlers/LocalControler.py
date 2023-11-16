@@ -21,7 +21,6 @@ class LocalControler():
             bd.conexion.commit()  # Confirmamos la transacción
             print("local creado exitosamente")
             cursor.close()
-            bd.conexion.close()
             return valido  # Devolvemos True para indicar que la operación fue exitosa
         except psycopg2.Error as e:
             print("Error al crear local", e)
@@ -39,30 +38,61 @@ class LocalControler():
             cursor.close()
         except psycopg2.Error as e:
             return e
-    def leerDatos(self):
+    def obtenerLocales(self):
         try:
             cursor = bd.conexion.cursor()
-            sql = "SELECT id, nombre, apellido, cedula, local, telefono, contrasena, estado, rol  FROM usuarios;"
+            sql = "SELECT id, nombre, numero, estado, productos FROM local;"
             cursor.execute(sql)
             bd.conexion.commit()
             usuarios = cursor.fetchall()
             cursor.close()
-            bd.conexion.close()
             return usuarios
         except psycopg2.Error as e:
-            print("Error al leer los datos del usuario", e)
+            print("Error al leer los datos de los locales", e)
             return e
 
-
-    def eliminarUsuario(self, id_usuario):
+    def obtenerLocalPorId(self, id):
         try:
             cursor = bd.conexion.cursor()
-            consulta = "DELETE FROM usuarios WHERE id = %s"
-            cursor.execute(consulta, id_usuario)
+            sql = "SELECT id, nombre, numero, estado, productos FROM local WHERE id = %(id)s;"
+            cursor.execute(sql, {"id": id})
+            result = cursor.fetchone()
+            cursor.close()
+            return result
+        except psycopg2.Error as e:
+            print(f"Error al leer los datos del local con ID {id}", e)
+            return e
+
+    def editarLocales(self, local: Local):
+        try:
+            cursor = bd.conexion.cursor()
+            sql = ("UPDATE local SET"
+                   " nombre = %(nombre)s,"
+                   " numero = %(numero)s,"
+                   " estado = %(estado)s,"
+                   " productos = %(productos)s"
+                   " WHERE id = %(id)s;")
+            cursor.execute(sql, {"nombre": local.nombre,
+                                 "numero": local.numero,
+                                 "estado": local.estado,
+                                 "productos": local.productos,
+                                 "id": local.id_local})
             bd.conexion.commit()
             cursor.close()
-            bd.conexion.close()
+            return True
         except psycopg2.Error as e:
-            print("Error al eliminar los datos del usuario", e)
+            print(f"Error al leer los datos de los locales con ID {id}", e)
+            return e
+
+    def eliminarLocal(self, id_local):
+        try:
+            cursor = bd.conexion.cursor()
+            consulta = "DELETE FROM local WHERE id = %(id)s"
+            cursor.execute(consulta, {"id": id_local})
+            bd.conexion.commit()
+            cursor.close()
+            return True
+        except psycopg2.Error as e:
+            print("Error al eliminar los datos del local", e)
             return e
 

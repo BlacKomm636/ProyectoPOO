@@ -52,7 +52,7 @@ class Main(QDialog):
             print(ex)
 
     def cerrarAplicacion(self):
-        mensaje = Pregunta("question", "Seguro?", "está seguro que desea cerrar la aplicación?", "cerrarAplicacion")
+        mensaje = Pregunta("question", "Seguro?", "está seguro que desea cerrar la aplicación?", "cerrarAplicacion", None)
         Ui_DialogQuestion(mensaje)
     # Mover ventana
     def mousePressEvent(self, event):

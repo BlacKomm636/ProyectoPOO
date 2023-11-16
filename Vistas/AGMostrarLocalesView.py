@@ -5,21 +5,22 @@ from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QVBoxLayout,QHBox
 
 from Vistas.AGCrearUsuariosView import AGCrearUsuarios
 from Vistas.AGCrearLocalesView import AGCrearLocales
-from Vistas.AGMostrarLocalesView import AGMostrarLocales
+from controlers.LocalControler import LocalControler
 from controlers.QuestionControler import Ui_DialogQuestion
 from controlers.UsuarioControler import UsuarioControler
+from models.Local import Local
 from models.Pregunta import Pregunta
 from models.Usuario import Usuario
 
 
-class AGMostrarUsuarios(QMainWindow):
+class AGMostrarLocales(QMainWindow):
 
     def __init__(self, parent=None):
-        super(AGMostrarUsuarios, self).__init__(parent)
+        super(AGMostrarLocales, self).__init__(parent)
         self.setupUI()
 
     def setupUI(self):
-        uic.loadUi("Vistas/ui_files/Admi.G(mostrarusuarios).ui", self)
+        uic.loadUi("Vistas/ui_files/Admi.G(verlocales).ui", self)
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
         #Definir componentes
         self.crearUsuario = self.findChild(QPushButton, "btnCrearUsuario")
@@ -30,28 +31,17 @@ class AGMostrarUsuarios(QMainWindow):
         self.minimizar = self.findChild(QPushButton, "btnMinimizar")
         self.crearLocales = self.findChild(QPushButton, "btnCrearLocales")
 
-        self.component = self.findChild(QWidget, "wUsers")
-        self.layout = self.findChild(QVBoxLayout, "verticalLayoutUsers")
-
-        self.nombre = self.findChild(QLabel, "labelNombre")
-        self.id = self.findChild(QLabel, "labelId")
-        self.local = self.findChild(QLabel, "labelLocal")
-        self.rol = self.findChild(QLabel, "labelRol")
-
-        self.tableUsuarios = self.findChild(QTableWidget, "tableWidgetUsuarios")
+        self.tableLocales = self.findChild(QTableWidget, "tableWidgetLocal")
         self.actualizar = self.findChild(QPushButton, "btnRecargar")
 
         #Eventos
         self.salir.setIcon(QIcon("assets/x-solid.svg"))
         self.minimizar.setIcon(QIcon("assets/minus-solid.svg"))
         self.actualizar.setIcon(QIcon("assets/girar.png"))
+        self.crearUsuario.clicked.connect(self.mostrarCrearUsuarios)
         self.salir.clicked.connect(self.exitApp)
         self.minimizar.clicked.connect(self.showMinimized)
-        #Vistas
         self.crearLocales.clicked.connect(self.mostrarCrearLocales)
-        self.crearUsuario.clicked.connect(self.mostrarCrearUsuarios)
-        self.locales.clicked.connect(self.mostrarVerLocales)
-
 
         self.actualizarTabla()
         self.actualizar.clicked.connect(self.actualizarTabla)
@@ -69,53 +59,46 @@ class AGMostrarUsuarios(QMainWindow):
             self.agCrearLocales.show()
         except Exception as ex:
             print(ex)
-
-    def mostrarVerLocales(self):
-        try:
-            self.agVerLocales = AGMostrarLocales()
-            self.agVerLocales.show()
-        except Exception as ex:
-            print(ex)
     def handleButtonClickEdit(self, row):
-        valorId = int(self.tableUsuarios.item(row, 0).text())
-        usuario:Usuario = UsuarioControler.obtenerUsuarioPorId(self, valorId)
-        self.modificarUsuario(usuario)
+        valorId = int(self.tableLocales.item(row, 0).text())
+        local:Local = LocalControler.obtenerLocalPorId(self, valorId)
+        self.modificarLocal(local)
 
     def handleButtonClickDelete(self, row):
-        valorId = int(self.tableUsuarios.item(row, 0).text())
-        usuario:Usuario = UsuarioControler.obtenerUsuarioPorId(self, valorId)
-        self.eliminarUsuario(usuario)
+        valorId = int(self.tableLocales.item(row, 0).text())
+        local:Local = LocalControler.obtenerLocalPorId(self, valorId)
+        self.eliminarLocal(local)
 
-    def modificarUsuario(self, usuario:Usuario):
+    def modificarLocal(self, local:Local):
         try:
-            self.agModificarUsuario = AGCrearUsuarios(usuario)
-            self.agModificarUsuario.show()
+            self.agModificarLocal = AGCrearLocales(local)
+            self.agModificarLocal.show()
         except Exception as ex:
             print(ex)
 
-    def eliminarUsuario(self, usuario: Usuario):
+    def eliminarLocal(self, local: Local):
         try:
-            mensaje = Pregunta("Question", "Eliminar", f"Está seguro de que desea eliminar el registro: {usuario[3]}?",
-                               "eliminarUsuario", usuario[0])
+            mensaje = Pregunta("Question", "Eliminar", f"Está seguro de que desea eliminar el registro: {local[1]}?",
+                               "eliminarLocal", local[0])
             Ui_DialogQuestion(mensaje)
         except Exception as ex:
             print(ex)
 
     def actualizarTabla(self):
-        self.tableUsuarios.setRowCount(0)
-        self.tableUsuarios.setColumnCount(0)
-        usuarios = UsuarioControler.leerDatos(self)
-        self.tableUsuarios.setRowCount(10)
-        self.tableUsuarios.setColumnCount(7)
-        self.tableUsuarios.setHorizontalHeaderLabels(
-            ('ID', 'Nombre', 'Apellido', 'Local', 'Teléfono', 'Rol', 'Acciones'))
-        self.tableUsuarios.setColumnWidth(1, 150)
-        self.tableUsuarios.setColumnWidth(2, 150)
-        self.tableUsuarios.setColumnWidth(3, 150)
-        self.tableUsuarios.setColumnWidth(4, 150)
-        self.tableUsuarios.verticalHeader().setVisible(False)
-        for i in range(len(usuarios)):
-            self.tableUsuarios.setRowHeight(i, 50)
+        self.tableLocales.setRowCount(0)
+        self.tableLocales.setColumnCount(0)
+        locales = LocalControler.obtenerLocales(self)
+        self.tableLocales.setRowCount(10)
+        self.tableLocales.setColumnCount(5)
+        self.tableLocales.setHorizontalHeaderLabels(
+            ('ID', 'Nombre', '# Local', 'Productos', 'Acciones'))
+        self.tableLocales.setColumnWidth(1, 150)
+        self.tableLocales.setColumnWidth(2, 150)
+        self.tableLocales.setColumnWidth(3, 150)
+        self.tableLocales.setColumnWidth(4, 150)
+        self.tableLocales.verticalHeader().setVisible(False)
+        for i in range(len(locales)):
+            self.tableLocales.setRowHeight(i, 50)
 
             btnEditar = QPushButton(self)
             btnEliminar = QPushButton(self)
@@ -134,15 +117,19 @@ class AGMostrarUsuarios(QMainWindow):
 
             cell_widget = QWidget()
             cell_widget.setLayout(layout)
-            newCadena = [str(usuarios[i][0]), usuarios[i][1], usuarios[i][2], usuarios[i][4], usuarios[i][5],
-                         usuarios[i][8]]
+            ultima_tupla = locales[i][-1]
+
+            # Convertir la tupla en una cadena separada por comas
+            cadena_resultante = ', '.join(map(str, ultima_tupla))
+
+            newCadena = [str(locales[i][0]), locales[i][1], str(locales[i][2]), cadena_resultante]
 
             btnEditar.clicked.connect(lambda _, r=i: self.handleButtonClickEdit(r))
             btnEliminar.clicked.connect(lambda _, r=i: self.handleButtonClickDelete(r))
 
             for j in range(len(newCadena)):
-                self.tableUsuarios.setItem(i, j, QTableWidgetItem(newCadena[j]))
-                self.tableUsuarios.setCellWidget(i, 6, cell_widget)
+                self.tableLocales.setItem(i, j, QTableWidgetItem(newCadena[j]))
+                self.tableLocales.setCellWidget(i, 4, cell_widget)
 
 
     def exitApp(self):

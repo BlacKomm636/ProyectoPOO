@@ -2,6 +2,7 @@ from PyQt5 import uic, QtCore
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QLineEdit, QCheckBox, QComboBox, QListWidget
 
 from controlers.MensajeControler import Ui_DialogMensaje
+from controlers.QuestionControler import Ui_DialogQuestion
 from controlers.UsuarioControler import UsuarioControler
 from models.Respuesta import Respuesta
 from models.Usuario import Usuario
@@ -10,8 +11,10 @@ from controlers.LocalControler import LocalControler
 from models.Pregunta import Pregunta
 
 class AGCrearLocales(QMainWindow):
-    def __init__(self,parent=None):
+    local:Local
+    def __init__(self,local, parent=None):
         super(AGCrearLocales, self).__init__(parent)
+        self.local = local
         self.setupUI()
     def setupUI(self):
         uic.loadUi("Vistas/ui_files/Admi.G(crearlocales).ui",self)
@@ -38,10 +41,19 @@ class AGCrearLocales(QMainWindow):
         self.agregar=self.findChild(QPushButton, "btnAgregar")
 
         #Eventos
+        if self.local is not None:
+            self.nombreNegocio.setText(self.local[1])
+            self.numeroLocal.setText(str(self.local[2]))
+            self.listadeProductos.addItems(self.local[4])
+
+            self.guardar.clicked.connect(lambda: self.modificarLocalPorAdministrador(self.nombreNegocio.text(), self.numeroLocal.text(), self.listadeProductos, self.local[0]))
+        else:
+            self.guardar.clicked.connect(
+                lambda: self.agregarLocalConProductos(self.nombreNegocio.text(), self.numeroLocal.text(),
+                                                      self.listadeProductos, True))
 
         self.agregar.clicked.connect(self.localControler)
 
-        self.guardar.clicked.connect(lambda: self.agregarLocalConProductos(self.nombreNegocio.text(), self.numeroLocal.text(), self.listadeProductos, True))
         self.cancelar.clicked.connect(self.hide)
         self.salir.clicked.connect(self.exitApp)
 
@@ -76,6 +88,31 @@ class AGCrearLocales(QMainWindow):
                 mensaje = Respuesta("Error", "Error!",
                                     "Error al crear el local, revise la información suministrada.")
                 Ui_DialogMensaje(mensaje)
+
+    def modificarLocalPorAdministrador(self, nombre, numero, productos, id):
+        try:
+            if nombre == "" or numero == "":
+                mensaje = Respuesta("error", "Error!",
+                                    "Faltan campos obligatorios")
+                Ui_DialogMensaje(mensaje)
+            else:
+                elements = []
+                for i in range(productos.count()):
+                    item = productos.item(i)
+                    elements.append(item.text())
+                local = Local(id, nombre, numero, elements, True)
+                self.newLocal = LocalControler.editarLocales(self, local)
+                if self.newLocal:
+                    mensaje = Respuesta("success", "Exito!",
+                                            "local modificado correctamente!")
+                    Ui_DialogMensaje(mensaje)
+                    self.hide()
+                else:
+                    mensaje = Respuesta("error", "Error!",
+                                            "Error al modificar el local, revise la información suministrada.")
+                    Ui_DialogMensaje(mensaje)
+        except Exception as ex:
+            print(ex)
 
     def exitApp(self):
         mensaje = Pregunta("Question","Salir", "Está seguro de que desea cerrar sesión y salir de la aplicación?", "cerrarAplicacion")

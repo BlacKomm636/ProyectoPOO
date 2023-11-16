@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QPushButton, QLabel
 from PyQt5 import uic
 from PyQt5.QtCore import *
 
+from controlers.LocalControler import LocalControler
 from controlers.MensajeControler import Ui_DialogMensaje
 from controlers.UsuarioControler import UsuarioControler
 from models import Pregunta
@@ -42,6 +43,8 @@ class Ui_DialogQuestion(QDialog):
             self.findChild(QPushButton, "btnAprobar").clicked.connect(lambda: self.cerrarAplicacion())
         elif r.aprobar == "eliminarUsuario":
             self.findChild(QPushButton, "btnAprobar").clicked.connect(lambda: self.eliminarUsuario(r.objeto))
+        elif r.aprobar == "eliminarLocal":
+            self.findChild(QPushButton, "btnAprobar").clicked.connect(lambda: self.eliminarLocal(r.objeto))
 
         self.findChild(QPushButton, "btnRechazar").clicked.connect(lambda: self.close())
         self.show()
@@ -56,6 +59,14 @@ class Ui_DialogQuestion(QDialog):
             self.hide()
             mensaje = Respuesta("success", "Exito!",
                                 "Usuario eliminado correctamente!")
+            Ui_DialogMensaje(mensaje)
+
+    def eliminarLocal(self, id):
+        eliminado = LocalControler.eliminarLocal(self, id)
+        if eliminado:
+            self.hide()
+            mensaje = Respuesta("success", "Exito!",
+                                "Local eliminado correctamente!")
             Ui_DialogMensaje(mensaje)
 
     def mousePressEvent(self, event):

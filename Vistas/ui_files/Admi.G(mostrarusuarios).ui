@@ -311,6 +311,26 @@ border:2px soild #6B675A;</string>
           <string>Usuarios creados</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="btnRecargar">
+         <property name="geometry">
+          <rect>
+           <x>824</x>
+           <y>22</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #fff;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>
